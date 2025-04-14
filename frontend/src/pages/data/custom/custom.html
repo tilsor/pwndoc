@@ -576,6 +576,16 @@
                                 </q-item-section>
                             </q-item>
                             <q-item>
+                                <q-item-section>
+                                    <q-input
+                                    :label="$t('description')"
+                                    v-model="newVulnCat.description"
+                                    clearable
+                                    outlined
+                                    />
+                                </q-item-section>
+                            </q-item>
+                            <q-item>
                                 <div class="text-subtitle1">{{$t('defaultSortingOptions')}}</div>
                             </q-item>
                             <q-item>
@@ -632,6 +642,14 @@
                                             />
                                         </q-item-section>
                                         <q-item-section>
+                                            <q-input
+                                            :label="$t('description')"
+                                            v-model="vulnCat.description"
+                                            readonly
+                                            outlined
+                                            />
+                                        </q-item-section>
+                                        <q-item-section>
                                             <q-select
                                             :label="$t('sortBy')"
                                             v-model="vulnCat.sortValue"
@@ -677,6 +695,13 @@
                                                 <q-input
                                                 :label="$t('name')"
                                                 v-model="vulnCat.name"
+                                                outlined
+                                                />
+                                            </q-item-section>
+                                            <q-item-section>
+                                                <q-input
+                                                :label="$t('description')"
+                                                v-model="vulnCat.description"
                                                 outlined
                                                 />
                                             </q-item-section>
